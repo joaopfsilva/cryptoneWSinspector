@@ -1,0 +1,103 @@
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#btc" class="icon fa-btc active"><span>Bitcoin</span></a>
+						<a href="#eth" class="icon fa-envelope"><span>Ethereum</span></a>
+						<a href="#xrp" class="icon fa-envelope"><span>Ripple</span></a>
+						<a href="#twt" class="icon fa-twitter"><span>Twitter</span></a>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+							<article id="btc" class="panel">
+								<header>
+									<h1>Bitcoin news</h1>
+								</header>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, molestias sunt non temporibus vitae, quasi excepturi laborum dolore consectetur quia similique velit quam ipsa officia mollitia totam. Consequatur, nulla impedit!</p>
+								<a href="#work" class="jumplink pic">
+									<span class="arrow icon fa-chevron-right"><span>See my work</span></span>
+									<img src="images/me.jpg" alt="" />
+								</a>
+							</article>
+
+							<article id="eth" class="panel">
+								<header>
+									<h2>Ethereum news</h2>
+								</header>
+								<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat eaque recusandae voluptates voluptas velit, veniam distinctio necessitatibus asperiores voluptatibus, hic ad impedit praesentium alias culpa, numquam. Libero deserunt quae unde!
+								</p>
+							</article>
+
+							<article id="xrp" class="panel">
+								<header>
+									<h2>Ripple news</h2>
+								</header>
+								<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat eaque recusandae voluptates voluptas velit, veniam distinctio necessitatibus asperiores voluptatibus, hic ad impedit praesentium alias culpa, numquam. Libero deserunt quae unde!
+								</p>
+							</article>
+
+						<!-- 	<article id="contact" class="panel">
+								<header>
+									<h2>Contact Me</h2>
+								</header>
+								<form action="#" method="post">
+									<div>
+										<div class="row">
+											<div class="6u 12u$(mobile)">
+												<input type="text" name="name" placeholder="Name" />
+											</div>
+											<div class="6u$ 12u$(mobile)">
+												<input type="text" name="email" placeholder="Email" />
+											</div>
+											<div class="12u$">
+												<input type="text" name="subject" placeholder="Subject" />
+											</div>
+											<div class="12u$">
+												<textarea name="message" placeholder="Message" rows="8"></textarea>
+											</div>
+											<div class="12u$">
+												<input type="submit" value="Send Message" />
+											</div>
+										</div>
+									</div>
+								</form>
+							</article> -->
+
+						<!-- Tweets -->
+							<article id="twt" class="panel">
+								<header>
+									<h2>Tweets</h2>
+								</header>
+								<form action="#" method="post">
+									<div>
+										<% @tweets.each do |tweet| %>
+											<p><%= tweet[:tweet] %> - <%= tweet[:url] %></p>
+										<% end %>
+									</div>
+								</form>
+							</article>
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
