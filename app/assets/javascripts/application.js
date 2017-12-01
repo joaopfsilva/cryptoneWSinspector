@@ -15,5 +15,7 @@
 //= require turbolinks
 //= require_tree .
 
+//= require skel-viewport
+//= require skel
 //= require util
 //= require main
