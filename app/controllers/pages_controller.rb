@@ -1,6 +1,24 @@
 class PagesController < ApplicationController
 
   def home
+    puts "********"
+    # client = Aws::S3::Client.new(region: CREDENTIALS['AWS_REGION'])
+    # puts client
+    s3 = Aws::S3::Resource.new(region: CREDENTIALS['AWS_REGION'], access_key_id: CREDENTIALS['AWS_ACCESS_KEY_ID'], secret_access_key: CREDENTIALS['AWS_SECRET_ACCESS_KEY'])
+    puts s3
+    puts CREDENTIALS['AWS_REGION'].class
+    puts '====='
+    @s3_objects = s3.bucket(CREDENTIALS['AWS_BUCKET']).objects
+
+# s3 = Aws::S3::Resource.new(region: "your-region")
+
+#get images url
+# s3.bucket("bucket-name").object("key/for/object")@s3_objects.presigned_url("get", expires_in: 3600)
+
+    # retrieve the objects
+    
+    #default path https://s3-eu-west-1.amazonaws.com/cryptonewsinpector/banner_img1.jpg
+
     require 'open-uri'
   	url  = "http://cryptone.ws"
     page = Nokogiri::HTML(open(url))
