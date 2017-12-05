@@ -4,11 +4,11 @@ class PagesController < ApplicationController
     puts "********"
     # client = Aws::S3::Client.new(region: CREDENTIALS['AWS_REGION'])
     # puts client
-    s3 = Aws::S3::Resource.new(region: CREDENTIALS['AWS_REGION'], access_key_id: CREDENTIALS['AWS_ACCESS_KEY_ID'], secret_access_key: CREDENTIALS['AWS_SECRET_ACCESS_KEY'])
+    s3 = Aws::S3::Resource.new(region: ENV['AWS_REGION'], access_key_id: ENV['AWS_ACCESS_KEY_ID'], secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'])
     puts s3
-    puts CREDENTIALS['AWS_REGION'].class
+    puts ENV['AWS_REGION'].class
     puts '====='
-    @s3_objects = s3.bucket(CREDENTIALS['AWS_BUCKET']).objects
+    @s3_objects = s3.bucket(ENV['AWS_BUCKET']).objects
 
 # s3 = Aws::S3::Resource.new(region: "your-region")
 
